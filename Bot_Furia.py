@@ -10,6 +10,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '⚡ Entre na pele da nossa pantera e sinta a energia que vai te deixar FURIOSO!\n'
         '💬 Quer se tornar um verdadeiro furioso? Digite /comandos e descubra os atalhos para estar sempre ligado na nossa pantera!\n'
     )
+    
 # Comando /comandos
 async def comandos(update: Update, context: ContextTypes.DEFAULT_TYPE):
     texto = (
@@ -31,7 +32,7 @@ def main():
     app = ApplicationBuilder().token("7693528871:AAHzgO0id6wpgvtf8RxVRnog80vsz-pxP3Q").build()
 
     app.add_handler(CommandHandler('start', start))
-    app.add_handler(CommandHandler('texto', comandos))
+    app.add_handler(CommandHandler('comandos', comandos))
 
     print('Bot FURIA está rodando!')
     app.run_polling()
