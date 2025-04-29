@@ -10,6 +10,7 @@ async def comandos(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '/lol - Lineup atual de League of Legends\n'
         '/r6 - Lineup atual de Rainbow Six\n'
         '/pubg - Lineup atual de PUBG\n'
+        '/rocketleague - Lineup atual de rocket League\n'
         '/socialfuria - Redes sociais da FURIA\n'
         '/loja - Acessar a loja oficial da FURIA\n'
         '/titulos - Ver títulos conquistados\n'
