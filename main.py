@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, CallbackContext
+from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, CallbackContext, CallbackQueryHandler
 
 # Importe as funções dos outros comandos
 from commands.start import start
@@ -8,6 +8,7 @@ from commands.socialfuria import social_furia
 from commands.loja import loja_furia
 from commands.titulos import titulos_furia
 from commands.kingsleague import kings_league
+from commands.furiaquiz import quizfuria, responder_pergunta
 
 # Importe a funções lineup do arquivo commands
 from commands.cs import lineup_cs
@@ -27,7 +28,7 @@ async def desconhecido_texto(update: Update, context: CallbackContext):
 def main():
     app = ApplicationBuilder().token("7693528871:AAHzgO0id6wpgvtf8RxVRnog80vsz-pxP3Q").build()
 
- # Adiciona um handler para os comandos
+     # Adiciona um handler para os comandos
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("comandos", comandos))
     app.add_handler(CommandHandler("cs", lineup_cs))
@@ -41,11 +42,16 @@ def main():
     app.add_handler(CommandHandler("rocketleague", lineup_rocket))
     app.add_handler(CommandHandler("kingsleague", kings_league))
 
-     # Este handler captura comandos desconhecidos (começam com '/')
+    #adiciona um handler para o comando quiz
+    app.add_handler(CommandHandler("quizfuria", quizfuria))
+    app.add_handler(CallbackQueryHandler(responder_pergunta, pattern="^resposta_"))
+
+    # Este handler captura comandos desconhecidos (começam com '/')
     app.add_handler(MessageHandler(filters.COMMAND, desconhecido_comando))
 
     # Este handler captura texto que não é comando
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, desconhecido_texto))
+
 
     print("Bot da FURIA está rodando... (Pressione Ctrl+C para parar)")
     app.run_polling()

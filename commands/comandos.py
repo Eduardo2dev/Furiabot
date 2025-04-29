@@ -11,10 +11,11 @@ async def comandos(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '/r6 - Lineup atual de Rainbow Six\n'
         '/pubg - Lineup atual de PUBG\n'
         '/rocketleague - Lineup atual de rocket League\n'
+        '/kingsleague - Tudo sobre a Furia na kings league\n'
         '/socialfuria - Redes sociais da FURIA\n'
         '/loja - Acessar a loja oficial da FURIA\n'
         '/titulos - Ver títulos conquistados\n'
-        '/kingsleague - Tudo sobre a Furia na kings league'
+        '/quizfuria - Desafie seus conhecimentos como um(a) furioso(a)\n'
     )
 
     await update.message.reply_text(texto, parse_mode='Markdown')
