@@ -1,6 +1,7 @@
 from telegram import Update
 from telegram.ext import ContextTypes
 
+# Comando /titulos
 async def titulos_furia(update: Update, context: ContextTypes.DEFAULT_TYPE):
     titulos = {
         "🟠 Counter-Strike: Global Offensive (CS:GO)": [
