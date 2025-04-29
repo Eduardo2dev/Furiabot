@@ -7,6 +7,7 @@ from commands.comandos import comandos
 from commands.socialfuria import social_furia
 from commands.loja import loja_furia
 from commands.titulos import titulos_furia
+from commands.kingsleague import kings_league
 
 # Importe a funções lineup do arquivo commands
 from commands.cs import lineup_cs
@@ -38,6 +39,7 @@ def main():
     app.add_handler(CommandHandler("loja", loja_furia))
     app.add_handler(CommandHandler("titulos", titulos_furia))
     app.add_handler(CommandHandler("rocketleague", lineup_rocket))
+    app.add_handler(CommandHandler("kingsleague", kings_league))
 
      # Este handler captura comandos desconhecidos (começam com '/')
     app.add_handler(MessageHandler(filters.COMMAND, desconhecido_comando))
