@@ -1,5 +1,7 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, CallbackContext, CallbackQueryHandler
+from dotenv import load_dotenv
+import os
 
 # Importe as funções dos outros comandos
 from commands.start import start
@@ -26,9 +28,12 @@ async def desconhecido_texto(update: Update, context: CallbackContext):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="Desculpe, não entendi essa mensagem. Use /comandos para ver a lista de comandos disponíveis.")
 
 def main():
-    app = ApplicationBuilder().token("7907523943:AAGMTmoqGq5rU7G0mwsz6UOO2efc--6L6Ho").build()
+    load_dotenv()
+    TOKEN = os.getenv("BOT_TOKEN")
 
-     # Adiciona um handler para os comandos
+    app = ApplicationBuilder().token(TOKEN).build()
+
+      # Adiciona um handler para os comandos
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("comandos", comandos))
     app.add_handler(CommandHandler("cs", lineup_cs))
