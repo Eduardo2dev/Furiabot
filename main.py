@@ -26,7 +26,7 @@ async def desconhecido_texto(update: Update, context: CallbackContext):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="Desculpe, não entendi essa mensagem. Use /comandos para ver a lista de comandos disponíveis.")
 
 def main():
-    app = ApplicationBuilder().token("7693528871:AAHzgO0id6wpgvtf8RxVRnog80vsz-pxP3Q").build()
+    app = ApplicationBuilder().token("7907523943:AAEDHcRA76iTraAWLgQfkVJ3WGXdIF4OyhI").build()
 
      # Adiciona um handler para os comandos
     app.add_handler(CommandHandler("start", start))
