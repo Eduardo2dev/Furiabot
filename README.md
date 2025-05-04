@@ -70,6 +70,6 @@ Aqui você pode listar possíveis melhorias ou funcionalidades que você planeja
 
 ## Contato
 
-- **Seu Nome:** Eduardo Nazario
-- **Seu Email:** `eduardonazario74@gmail.com`
-- **Seu LinkedIn (Opcional):** `https://www.linkedin.com/in/eduardo-nazario-898973282/`
+-  Eduardo Nazario
+- `eduardonazario74@gmail.com`
+-  `https://www.linkedin.com/in/eduardo-nazario-898973282/`
