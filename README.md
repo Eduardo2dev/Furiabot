@@ -47,9 +47,10 @@ Uma landing page simples foi criada para facilitar o acesso ao FURIA Fan Bot. A 
 
 - Link da Landing Page: `https://furiabothtml.vercel.app/`
 
-## Estrutura do Código (Breve Descrição)
+## Estrutura do Código
 
 O projeto é estruturado da seguinte forma:
+
 furia_fan_bot/
 ├── assets/         # Organizar código em pastas para melhor modularidade
 ├── commands/       # feat: adicionado o comando /quiz
