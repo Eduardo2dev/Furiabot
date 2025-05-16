@@ -8,7 +8,7 @@ async def lineup_cs(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ("🇧🇷", "FalleN"),
         ("🇧🇷", "KSCERATO"),
         ("🇱🇻", "YEKINDAR"),
-        ("🇷🇺", "molodoy")
+        ("🇰🇿", "molodoy")
     ]
     lineup_str = "⚔️ **Lineup atual da FURIA CS:**\n"
     for flag, player in current_lineup:
